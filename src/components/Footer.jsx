@@ -1,22 +1,39 @@
+import { useEffect, useState } from "react";
 import BrandLogo from "./BrandLogo";
 
 function Footer() {
-    const socialMedia = [
-        {name: "instagram", link: "#"},
-        {name: "behance", link: "#"},
-        {name: "facebook", link: "#"},
-        {name: "Linkedin", link: "#"},
-    ]
-    const pages = [
-        {name: "Home", link: ""},
-        {name: "Services", link: ""},
-        {name: "Our work", link: ""},
-        {name: "About us", link: ""},
-        {name: "Insights", link: ""},
-        {name: "Contact us", link: ""},
-    ]
+  const [time, setTime] = useState("00:00:00");
+  const socialMedia = [
+    { name: "instagram", link: "#" },
+    { name: "behance", link: "#" },
+    { name: "facebook", link: "#" },
+    { name: "Linkedin", link: "#" },
+  ];
+  const pages = [
+    { name: "Home", link: "" },
+    { name: "Services", link: "" },
+    { name: "Our work", link: "" },
+    { name: "About us", link: "" },
+    { name: "Insights", link: "" },
+    { name: "Contact us", link: "" },
+  ];
+
+  useEffect(() => {
+    setInterval(() => {
+      var now = new Date();
+      var hours = now.getHours() % 12 || 12;
+      var min = now.getMinutes();
+      var sec = now.getSeconds();
+      setTime(`${hours} : ${min}: ${sec}`);
+    }, 1000);
+  }, []);
+
   return (
-    <div className="w-full px-14 flex justify-between">
+    <div
+      data-scroll
+      data-scroll-speed="-.3"
+      className="w-full px-14 flex justify-between"
+    >
       <div className="h-screen w-1/2 uppercase text-9xl font-semibold flex flex-col justify-between py-10">
         <div className="bundler">
           <h1 className="Founder -mb-8">eye-</h1>
@@ -59,12 +76,13 @@ function Footer() {
               E: <br /> hello@ochi.design@
             </h3>
             <p>
-            A: <br />  Ochi Design, 78 Market Street, <br /> Suite 456, San Francisco, CA 94103.
+              A: <br /> Ochi Design, 78 Market Street, <br /> Suite 456, San
+              Francisco, CA 94103.
             </p>
           </div>
 
           {/* pending */}
-          <div className="time text-xl">12:00:99</div>
+          <div className="time text-xl">{time}</div>
         </div>
       </div>
     </div>

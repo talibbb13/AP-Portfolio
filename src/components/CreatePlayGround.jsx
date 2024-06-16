@@ -17,7 +17,7 @@ function CreatePlayGround({ bgElement, video, otherElements }) {
     <div
       data-scroll
       data-scroll-section
-      data-scroll-speed="-.5"
+      data-scroll-speed="-.3"
       className="relative h-full w-full overflow-hidden"
     >
       <div className="bgElement">{bgElement}</div>

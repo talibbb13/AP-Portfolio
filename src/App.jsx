@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   Intro,
   Landing,
@@ -9,17 +10,26 @@ import {
   Cards,
   Footer,
 } from "./components";
-import LocomotiveScroll from 'locomotive-scroll';
-import { useEffect, useRef } from 'react';
+import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
-const locomotiveScroll = new LocomotiveScroll();
+  const locomotiveScroll = new LocomotiveScroll();
+  const [navBarState, setNavBarState] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("wheel", (dets) => {
+      if (dets.deltaY > 0) {
+        setNavBarState(false);
+      } else {
+        setNavBarState(true);
+      }
+    });
+  });
+
   return (
     <>
-      <div
-        className="w-full bg-[#0F0F0F] text-white"
-      >
-        <NavBar />
+      <div className="w-full bg-[#0F0F0F] text-white relative">
+        <NavBar navBarState={navBarState} />
         <Landing />
         <Marquee />
         <Intro />

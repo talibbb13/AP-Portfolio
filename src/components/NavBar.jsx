@@ -1,6 +1,6 @@
 import BrandLogo from "./BrandLogo"
 
-function NavBar() {
+function NavBar({navBarState}) {
   const navItems = [
     {
       name: "Home",
@@ -29,9 +29,14 @@ function NavBar() {
   ];
 
   return (
-    <nav className="fixed bg-zinc-900 w-full flex justify-between items-center py-7 px-14 z-[999999999]">
+    <nav
+      style={{ transition: "transform .5s cubic-bezier(.3,.86,.36,.95)" }}
+      className={`fixed bg-transparent backdrop-blur-sm w-full flex justify-between items-center py-7 px-14 z-[999] ${
+        navBarState ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="left">
-        <BrandLogo/>
+        <BrandLogo />
       </div>
       <div className="right">
         <ul className="flex gap-10 text-lg">
