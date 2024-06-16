@@ -1,18 +1,17 @@
 # blue-print
 
-## sections:::
--navbar ✅
--lp ✅
--marquee pending ✅
--intro ✅
--play ground ✅
--projects ✅
--about us ❌
--project cards ✅
--cards ✅
--play ground 2 ...
--footer ✅
+### sections:::
+--navbar ✅
+--lp ✅
+--marquee ✅
+--intro ✅
+--play ground ✅
+--projects ✅
+--project cards ✅
+--cards ✅
+--play ground 2 ❌
+--footer ✅
 
--minor compo:::
+### minor compo:::
 -button ✅
 -card ✅
