@@ -1,0 +1,43 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Montreal;
+    src: url("./Assets/fonts/NeueMontreal-Regular.ttf");
+}
+@font-face {
+    font-family: Founder;
+    src: url("./Assets/fonts/FoundersGrotesk-Semibold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montreal;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.Founder {
+    font-family: Founder;
+}
+
+/* scrollbar styles */
+*::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+	border: 2px solid #555555;
+    border-radius: 3px;
+}
