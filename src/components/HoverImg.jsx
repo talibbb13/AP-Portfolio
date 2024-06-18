@@ -1,32 +1,62 @@
-import React from "react";
+import gsap, { Power4 } from "gsap";
 
 function HoverImg() {
+  var rot = 0;
+  var rotDiff = 0;
+
   const elemItems = [
-    { imgSrc: "./Images/plug.webp", title: "Workiz Easy", year: "2022" },
     {
-      imgSrc: "./Images/ixperience.png",
+      title: "Workiz Easy",
+      year: "2022",
+      imgSrc: "https://cynthiaugwu.com/images/hovers/plug.png",
+    },
+    {
       title: "Premium Blender",
       year: "2014",
+      imgSrc: "https://cynthiaugwu.com/images/hovers/ixperience.png",
     },
-    { imgSrc: "./Images/hudu.png", title: "Hypercare Systems", year: "2019" },
-    { imgSrc: "./Images/hudu.png", title: "Orderlion", year: "2019" },
+    {
+      title: "Hypercare Systems",
+      year: "2019",
+      imgSrc: "https://cynthiaugwu.com/images/hovers/hudu.png",
+    },
+    {
+      title: "Orderlion",
+      year: "2019",
+      imgSrc: "https://cynthiaugwu.com/images/cynthia.png",
+    },
   ];
 
-  const handleImgHover = (dets) => {
-    // console.log("imgHoverArea");
-  }
+  const handleImgHover = (e) => {
+    var yLoc = e.clientY - e.currentTarget.getBoundingClientRect().top;
+    rotDiff = e.clientX - rot;
+    rot = e.clientX;
 
-  const handleImgHide = () => {
-    // console.log("imgHoverArea");
-  }
+    // console.log(e.targetquerySelector("img"));
+    gsap.to(e.currentTarget.querySelector("img"), {
+      opacity: 1,
+      ease: Power4,
+      left: e.clientX,
+      top: yLoc,
+      rotate: gsap.utils.clamp(-20, 20, rotDiff * 0.3),
+    });
+  };
+
+  const handleImgHide = (elem) => {
+    gsap.to(elem.querySelector("img"), {
+      opacity: 0,
+      ease: Power4,
+      duration: 0.5,
+    });
+  };
 
   return (
     <div className="py-10 px-14 uppercase">
       <div>
         {elemItems.map((item, ind) => (
           <div
-            onMouseMove={handleImgHover}
-            onMouseLeave={handleImgHide}
+            onMouseMove={(e) => handleImgHover(e)}
+            onMouseLeave={(e) => handleImgHide(e.target)}
             key={ind}
             className={`elem group w-full border-t-2 py-[4vw] pl-[3vw] flex justify-between relative ${
               ind === elemItems.length - 1 && "border-b-2"
@@ -35,8 +65,8 @@ function HoverImg() {
           >
             <img
               className="absolute z-[9] h-[120%] opacity-0 rounded-sm pointer-events-none -translate-x-1/2 -translate-y-1/2"
-              src={item.Src}
-              alt=""
+              src={item.imgSrc}
+              alt={item.title}
             />
             <h1
               className="text-[3vw] font-semibold opacity-[.7] group-hover:scale-[.9]"

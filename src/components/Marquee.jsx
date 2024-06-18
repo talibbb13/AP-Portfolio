@@ -8,7 +8,7 @@ function Marquee() {
           initial={{ x: "0" }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
-          className="Founder leading-[.8] -mt-[50px] -mb-[5px] px-14"
+          className="Founder leading-[.9] -mt-[40px] px-14"
         >
           We are Ochi
         </motion.h1>
@@ -16,7 +16,7 @@ function Marquee() {
           initial={{ x: "0" }}
           animate={{ x: "-100%" }}
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
-          className="Founder leading-[.8] -mt-[50px] -mb-[5px] px-14"
+          className="Founder leading-[.9] -mt-[40px] px-14"
         >
           We are Ochi
         </motion.h1>
