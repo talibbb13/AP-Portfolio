@@ -43,7 +43,7 @@ function Intro() {
 
       <div className="mt-[7vw] text-6xl flex justify-between pb-12 ">
         <div>
-          <h3 className="pb-7 text-[#212121]">Our approach:</h3>
+          <h3 className="pb-7 text-[#3a3f27]">Our approach:</h3>
           <CreateButton
             px="px-[2rem]"
             py="py-[1rem]"

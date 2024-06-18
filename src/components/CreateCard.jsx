@@ -1,3 +1,6 @@
+import { showCursor, hideCursor } from "../store/dataSlice";
+import { useDispatch } from "react-redux";
+
 function CreateCard({
   height = "h-[55vh]",
   width = "w-[20vw]",
@@ -5,13 +8,19 @@ function CreateCard({
   bgColor,
   centerImg,
   sideBtn,
-  className
+  className,
 }) {
+  const dispatch = useDispatch();
   return (
     <div className={`${height} ${width} ${className}`}>
       <div
-        className={`${bgColor} h-full w-full relative rounded-lg bg-center bg-cover hover:scale-[.9]`}
-        style={{ backgroundImage: `url(${bgImg})`, transition: "transform 0.6s cubic-bezier(0, 0.55, 0.45, 1)" }}
+        className={`${bgColor} h-full w-full relative rounded-lg bg-center bg-cover hover:scale-[.9] cursor-pointer`}
+        style={{
+          backgroundImage: `url(${bgImg})`,
+          transition: "transform 0.6s cubic-bezier(0, 0.55, 0.45, 1)",
+        }}
+        onMouseEnter={()=>dispatch(showCursor())}
+        onMouseLeave={()=>dispatch(hideCursor())}
       >
         {centerImg && (
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">

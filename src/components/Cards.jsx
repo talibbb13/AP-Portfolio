@@ -4,7 +4,7 @@ import CreateCard from "./CreateCard";
 
 function Cards() {
   return (
-    <div className="min-h-screen px-14 flex justify-between flex-wrap">
+    <div className="px-14 flex justify-between flex-wrap">
       <CreateCard
         centerImg={<BrandLogo width="5rem" textColor={"#CDEA68"} />}
         width="w-[45vw]"

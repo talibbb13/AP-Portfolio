@@ -30,8 +30,6 @@ function Footer() {
 
   return (
     <div
-      data-scroll
-      data-scroll-speed="-.3"
       className="w-full px-14 flex justify-between"
     >
       <div className="h-screen w-1/2 uppercase text-9xl font-semibold flex flex-col justify-between py-10">

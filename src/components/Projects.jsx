@@ -1,6 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
+import { showCursor, hideCursor } from "../store/dataSlice"
+import { useDispatch } from "react-redux";
 
 function Projects() {
+  const dispatch = useDispatch()
+
   const proCards = [
     useAnimation(),
     useAnimation(),
@@ -12,12 +16,14 @@ function Projects() {
     proCards[ind].start({
       y: "0%",
     });
+    dispatch(showCursor())
   };
 
   const handleHoverEnd = (ind) => {
     proCards[ind].start({
       y: "100%",
     });
+    dispatch(hideCursor());
   };
   return (
     <div className="min-h-screen rounded-tl-lg rounded-tr-lg bg-[#0F0F0F] relative">
@@ -34,7 +40,7 @@ function Projects() {
           <motion.div
             onHoverStart={() => handleHoverStart(0)}
             onHoverEnd={() => handleHoverEnd(0)}
-            className="cardHolder h-[80vh] w-[40vw] relative"
+            className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer"
           >
             <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
               {"FYDE".split("").map((letter, ind) => (
@@ -67,7 +73,7 @@ function Projects() {
           <motion.div
             onHoverStart={() => handleHoverStart(1)}
             onHoverEnd={() => handleHoverEnd(1)}
-            className="cardHolder h-[80vh] w-[40vw] relative"
+            className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer"
           >
             <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
               {"VISA".split("").map((letter, ind) => (
@@ -100,7 +106,7 @@ function Projects() {
           <motion.div
             onHoverStart={() => handleHoverStart(2)}
             onHoverEnd={() => handleHoverEnd(2)}
-            className="cardHolder h-[80vh] w-[40vw] relative"
+            className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer"
           >
             <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
               {"TRAWA".split("").map((letter, ind) => (
@@ -134,7 +140,7 @@ function Projects() {
             <p>PREMIUM BLEND</p>
           </div>
 
-          <div className="cardHolder h-[80vh] w-[40vw] relative">
+          <div className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer">
             <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
               {"PREMIUM".split("").map((letter, ind) => (
                 <motion.span
