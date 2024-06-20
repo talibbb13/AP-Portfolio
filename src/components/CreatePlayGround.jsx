@@ -25,8 +25,8 @@ function CreatePlayGround({ bgElement, video, otherElements }) {
 
       <div className="Eyes z-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center gap-8">
         <div className="Sclera h-[13vw] w-[13vw] bg-zinc-200 rounded-full flex justify-center items-center">
-          <div className="Iris relative h-1/2 w-1/2 rounded-full bg-black hover:bg-zinc-900">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs">
+          <div className="Iris relative h-3/5 w-3/5 rounded-full bg-black hover:bg-zinc-900">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-md">
               Play
             </div>
             <div
@@ -37,13 +37,13 @@ function CreatePlayGround({ bgElement, video, otherElements }) {
               }}
               className="PupilHolder w-full h-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="Pupil absolute right-2 h-3 w-3 rounded-full bg-white"></div>
+              <div className="Pupil absolute right-2 h-4 w-4 rounded-full bg-white"></div>
             </div>
           </div>
         </div>
         <div className="Sclera h-[13vw] w-[13vw] bg-zinc-200 rounded-full flex justify-center items-center">
-          <div className="Iris relative h-1/2 w-1/2 rounded-full bg-black hover:bg-zinc-900">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs">
+          <div className="Iris relative h-3/5 w-3/5 rounded-full bg-black hover:bg-zinc-900">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-md">
               Play
             </div>
             <div
@@ -54,7 +54,7 @@ function CreatePlayGround({ bgElement, video, otherElements }) {
               }}
               className="PupilHolder w-full h-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="Pupil absolute right-2 h-3 w-3 rounded-full bg-white"></div>
+              <div className="Pupil absolute right-2 h-4 w-4 rounded-full bg-white"></div>
             </div>
           </div>
         </div>
