@@ -1,34 +1,34 @@
+import gsap from "gsap";
 import { useEffect, useState } from "react";
 
 function CreatePlayGround({ bgElement, video, otherElements }) {
   const [rotate, setRotate] = useState(0);
-{/* ummmm */}
-const [transX, setTransX] = useState(0)
-const [transY, setTransY] = useState(0)
+  const [translateX, setTranslateX] = useState(0);
+  const [translateY, setTranslateY] = useState(0);
 
   useEffect(() => {
-{/* experiment area */}
-let translateX = 0
-let translateY = 0
-let prevX = 0
-let prevY = 0
-
-
     window.addEventListener("mousemove", (e) => {
       let deltaX = e.clientX - window.innerWidth / 2;
       let deltaY = e.clientY - window.innerHeight / 2;
-
       const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
       setRotate(angle);
-
-{/* again... */}
-var xDiff = e.clientX - prevX
-var yDiff = e.clinetY - prevY
-translateX = gsap.utils.clamp(-10, 10, xDiff)
-translateY = gsap.utils.clamp(-10, 10, yDiff)
-setTransX(translateX)
-setTransY(translateY)
-
+      
+      let transX = gsap.utils.mapRange(
+        0,
+        window.innerWidth,
+        -25,
+        25,
+        e.clientX
+      );
+      let transY = gsap.utils.mapRange(
+        0,
+        window.innerHeight,
+        -25,
+        25,
+        e.clientY
+      );
+      setTranslateX(transX);
+      setTranslateY(transY);
     });
   }, []);
 
@@ -44,9 +44,14 @@ setTransY(translateY)
 
       <div className="Eyes z-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center gap-8">
         <div className="Sclera h-[13vw] w-[13vw] bg-zinc-200 rounded-full flex justify-center items-center">
-
-{/* boommmm */ }
-          <div className="Iris relative h-3/5 w-3/5 rounded-full bg-black hover:bg-zinc-900" style={{transform: `translate(${transX}px, ${transY}px)`}}>
+          {/* boommmm */}
+          <div
+            className="Iris relative h-3/5 w-3/5 rounded-full bg-black hover:bg-zinc-900"
+            style={{
+              transform: `translate(${translateX}px, ${translateY}px)`,
+              transition: "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)",
+            }}
+          >
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-md">
               Play
             </div>
@@ -58,12 +63,18 @@ setTransY(translateY)
               }}
               className="PupilHolder w-full h-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="Pupil absolute right-2 h-4 w-4 rounded-full bg-white"></div>
+              <div className="Pupil absolute right-2 h-[.8rem] w-[.8rem] rounded-full bg-white"></div>
             </div>
           </div>
         </div>
         <div className="Sclera h-[13vw] w-[13vw] bg-zinc-200 rounded-full flex justify-center items-center">
-          <div className="Iris relative h-3/5 w-3/5 rounded-full bg-black hover:bg-zinc-900">
+          <div
+            className="Iris relative h-3/5 w-3/5 rounded-full bg-black hover:bg-zinc-900"
+            style={{
+              transform: `translate(${translateX}px, ${translateY}px)`,
+              transition: "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)",
+            }}
+          >
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-md">
               Play
             </div>
@@ -75,7 +86,7 @@ setTransY(translateY)
               }}
               className="PupilHolder w-full h-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="Pupil absolute right-2 h-4 w-4 rounded-full bg-white"></div>
+              <div className="Pupil absolute right-2 h-[.8rem] w-[.8rem] rounded-full bg-white"></div>
             </div>
           </div>
         </div>
