@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import BrandLogo from "./BrandLogo";
+import { FaDribbble, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { TiSocialLinkedin } from "react-icons/ti";
 
 function Footer() {
   const [time, setTime] = useState("00:00:00");
   const socialMedia = [
-    { name: "instagram", link: "#" },
-    { name: "behance", link: "#" },
-    { name: "facebook", link: "#" },
-    { name: "Linkedin", link: "#" },
+    { icon: <FaInstagram />, link: "#" },
+    { icon: <FaDribbble />, link: "#" },
+    { icon: <FaFacebookF />, link: "#" },
+    { icon: <TiSocialLinkedin />, link: "#" },
   ];
   const pages = [
     { name: "Home", link: "" },
@@ -29,10 +31,8 @@ function Footer() {
   }, []);
 
   return (
-    <div
-      className="w-full px-14 flex justify-between"
-    >
-      <div className="h-screen w-1/2 uppercase text-9xl font-semibold flex flex-col justify-between py-10">
+    <div className="w-full px-14 flex justify-between">
+      <div className="min-h-screen w-1/2 uppercase text-9xl font-semibold flex flex-col justify-between py-10">
         <div className="bundler">
           <h1 className="Founder -mb-8">eye-</h1>
           <h1 className="Founder">Opening</h1>
@@ -46,11 +46,13 @@ function Footer() {
 
         <div className="Links w-full flex justify-between px-40">
           <div className="socialMediaLinks">
-            <h1 className="text-lg">SM:</h1>
-            <div className="bundler flex flex-col underline">
+            <h1 className="text-xl">SM:</h1>
+            <div className="bundler flex gap-3 underline">
               {socialMedia.map((sm, ind) => (
-                <a key={ind} href={sm.link}>
-                  {sm.name}
+                <a key={ind} href={sm.link} className="cover text-black bg-white rounded-full flex justify-center items-center h-10 w-10">
+                  <div >
+                    {sm.icon}
+                  </div>
                 </a>
               ))}
             </div>
@@ -71,8 +73,9 @@ function Footer() {
         <div className="modern flex justify-between items-center px-40">
           <div className="bundler">
             <h3>
-              E: <br /> hello@ochi.design@
+              E: <br /> hello@ochi.design
             </h3>
+            <br />
             <p>
               A: <br /> Ochi Design, 78 Market Street, <br /> Suite 456, San
               Francisco, CA 94103.

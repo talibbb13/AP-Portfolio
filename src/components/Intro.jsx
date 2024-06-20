@@ -7,8 +7,8 @@ function Intro() {
     <div
       data-scroll
       data-scroll-section
-      data-scroll-speed="-.3"
-      className="main bg-[#CDEA68] text-black px-14 rounded-tl-lg rounded-tr-lg min-h-screen relative z-50"
+      data-scroll-speed="-.1"
+      className="main bg-[#CDEA68] text-black px-14 rounded-lg min-h-screen relative z-50"
     >
       <div className="min-h-screen py-10 text-2xl">
         <h1 className="text-5xl Montreal pr-[10vw] py-24 text-[#212121] tracking-tight leading-none">
@@ -50,7 +50,7 @@ function Intro() {
             bgColor="bg-[#212121]"
             className="border-none"
             textColor="text-white"
-            icon={<RxArrowTopRight />}
+            icon={<RxArrowTopRight className="text-[#3a3f27]" />}
             children={"Read More"}
           ></CreateButton>
         </div>

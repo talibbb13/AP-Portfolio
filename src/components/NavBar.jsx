@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import BrandLogo from "./BrandLogo"
 
 function NavBar({navBarState}) {
@@ -7,12 +8,12 @@ function NavBar({navBarState}) {
       rout: "/",
     },
     {
-      name: "Services",
-      rout: "/services",
+      name: "Skills",
+      rout: "/skills",
     },
     {
-      name: "Our work",
-      rout: "/work",
+      name: "Projects",
+      rout: "/porjects",
     },
     {
       name: "About us",
@@ -41,12 +42,12 @@ function NavBar({navBarState}) {
       <div className="right">
         <ul className="flex gap-10 text-lg">
           {navItems.map((item, ind) => (
-            <li
+            <NavLink to={item.rout}
               className={`${ind === navItems.length - 2 && "pr-32"}`}
               key={item.name}
             >
-              <a href={item.rout}>{item.name}</a>
-            </li>
+              {item.name}
+            </NavLink>
           ))}
         </ul>
       </div>

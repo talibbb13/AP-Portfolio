@@ -53,19 +53,11 @@ function App() {
     });
   });
 
-  const showCursor = () => {
-    console.log();
-  }
-
-  const hideCursor = () => {
-    console.log();
-  }
-
   return (
     <>
       <div className="w-full bg-[#0F0F0F] text-white relative">
         <div
-          className={`bigCursor fixed -top-[6%] -left-[2%] h-20 w-20 bg-zinc-200 rounded-full z-[999999999] pointer-events-none flex justify-center items-center text-black ${
+          className={`bigCursor fixed -top-[6%] -left-[2%] h-14 w-14 bg-zinc-200 rounded-full z-[999999999] pointer-events-none flex justify-center items-center text-black text-xs ${
             cursorState ? "block" : "hidden"
           } mix-blend-difference`}
           ref={bigCursorRef}
@@ -73,7 +65,7 @@ function App() {
             transition: "transform 0.3s cubic-bezier(0.33, 1, 0.68, 1)",
           }}
         >
-          Visit <RxArrowTopRight />
+          Click it <RxArrowTopRight />
         </div>
         <NavBar navBarState={navBarState} />
         <Landing />

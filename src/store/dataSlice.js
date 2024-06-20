@@ -2,6 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   status: false,
+  height: "",
+  width: "",
+  innerText: "view",
+  icon: ""
 };
 
 const cursorState = createSlice({
