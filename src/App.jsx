@@ -1,12 +1,5 @@
 import {
-  Intro,
-  Landing,
-  Marquee,
   NavBar,
-  PlayGround,
-  Projects,
-  HoverImg,
-  Cards,
   Footer,
 } from "./components";
 import { useEffect, useRef, useState } from "react";
@@ -14,6 +7,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import gsap from "gsap";
 import { RxArrowTopRight } from "react-icons/rx";
 import { useSelector } from "react-redux";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -68,13 +62,7 @@ function App() {
           Click it <RxArrowTopRight />
         </div>
         <NavBar navBarState={navBarState} />
-        <Landing />
-        <Marquee />
-        <Intro />
-        <PlayGround />
-        <Projects />
-        <HoverImg />
-        <Cards />
+          <Outlet/>
         <Footer />
       </div>
     </>

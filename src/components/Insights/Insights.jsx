@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Skills = () => {
+const Insights = () => {
   return (
     <div className="h-screen w-full flex justify-center items-center">
-      Skills
+      Insights
     </div>
   );
 }
 
-export default Skills
+export default Insights

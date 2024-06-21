@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { showCursor, hideCursor } from "../store/dataSlice"
 import { useDispatch } from "react-redux";
 
-function Projects() {
+function ProjectsCard() {
   const dispatch = useDispatch()
 
   const proCards = [
@@ -167,4 +167,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsCard;

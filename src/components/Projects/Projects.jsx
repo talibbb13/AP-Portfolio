@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Skills = () => {
+const Projects = () => {
   return (
     <div className="h-screen w-full flex justify-center items-center">
-      Skills
+      Projects
     </div>
   );
-}
+};
 
-export default Skills
+export default Projects;
