@@ -1,16 +1,12 @@
 # MAP
 
 ### Routs:
-* skill 
+* skill ✅
 * project 
-* about me 
+* about me ...
 * insights 
-* contact 
+* contact ✅
 * projects 
-* project cards 
-* cards 
-* play ground 2 
-* footer 
 
 ### Minor Animation:
 * *text destructuring

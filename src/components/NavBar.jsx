@@ -16,7 +16,7 @@ function NavBar({navBarState}) {
       rout: "/projects",
     },
     {
-      name: "About us",
+      name: "About me",
       rout: "/about",
     },
     {
