@@ -49,7 +49,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full bg-[#0F0F0F] text-white relative">
+      <div className="w-full bg-[#0F0F0F] text-white relative ---bg-[url('https://wallpapercave.com/wp/wp6418877.jpg')]">
         <div
           className={`bigCursor fixed -top-[6%] -left-[2%] h-14 w-14 bg-zinc-200 rounded-full z-[999999999] pointer-events-none flex justify-center items-center text-black text-xs ${
             cursorState ? "block" : "hidden"
@@ -62,7 +62,7 @@ function App() {
           Click it <RxArrowTopRight />
         </div>
         <NavBar navBarState={navBarState} />
-          <Outlet/>
+        <Outlet />
         <Footer />
       </div>
     </>

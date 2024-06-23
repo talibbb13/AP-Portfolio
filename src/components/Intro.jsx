@@ -1,6 +1,6 @@
 import { RxArrowTopRight } from "react-icons/rx";
 import CreateButton from "./CreateButton";
-
+import CreateStringBand from "./CreateStringBand";
 
 function Intro() {
   return (
@@ -16,7 +16,7 @@ function Intro() {
           to raise funds, sell products, explain complex ideas, and hire great
           people.
         </h1>
-        <div className="border-b-2 border-t-2 border-[#AEC65B] pt-10 pb-20 text-[#40452D] flex justify-between">
+        <div className="pt-10 pb-20 text-[#40452D] flex justify-between">
           <h6 className="w-[30vw] font-normal">What you can expect:</h6>
           <div className="w-[30vw] mr-12 font-medium">
             <p>
@@ -40,6 +40,8 @@ function Intro() {
           </div>
         </div>
       </div>
+
+      <CreateStringBand color="black"/>
 
       <div className="mt-[7vw] text-6xl flex justify-between pb-12 ">
         <div>
