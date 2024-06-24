@@ -1,9 +1,9 @@
 import { motion, useAnimation } from "framer-motion";
-import { showCursor, hideCursor } from "../store/dataSlice"
+import { showCursor, hideCursor } from "../store/dataSlice";
 import { useDispatch } from "react-redux";
 
 function ProjectsCard() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const proCards = [
     useAnimation(),
@@ -16,7 +16,7 @@ function ProjectsCard() {
     proCards[ind].start({
       y: "0%",
     });
-    dispatch(showCursor())
+    dispatch(showCursor());
   };
 
   const handleHoverEnd = (ind) => {
@@ -40,9 +40,9 @@ function ProjectsCard() {
           <motion.div
             onHoverStart={() => handleHoverStart(0)}
             onHoverEnd={() => handleHoverEnd(0)}
-            className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer"
+            className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
-            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
+            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
               {"FYDE".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
@@ -73,9 +73,9 @@ function ProjectsCard() {
           <motion.div
             onHoverStart={() => handleHoverStart(1)}
             onHoverEnd={() => handleHoverEnd(1)}
-            className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer"
+            className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
-            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
+            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
               {"VISA".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
@@ -106,9 +106,9 @@ function ProjectsCard() {
           <motion.div
             onHoverStart={() => handleHoverStart(2)}
             onHoverEnd={() => handleHoverEnd(2)}
-            className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer"
+            className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
-            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
+            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
               {"TRAWA".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
@@ -140,8 +140,8 @@ function ProjectsCard() {
             <p>PREMIUM BLEND</p>
           </div>
 
-          <div className="cardHolder h-[80vh] w-[40vw] relative cursor-pointer">
-            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden">
+          <div className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer">
+            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
               {"PREMIUM".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}

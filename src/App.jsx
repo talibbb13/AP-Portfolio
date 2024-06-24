@@ -1,7 +1,4 @@
-import {
-  NavBar,
-  Footer,
-} from "./components";
+import { NavBar, Footer } from "./components";
 import { useEffect, useRef, useState } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import gsap from "gsap";
@@ -13,7 +10,7 @@ function App() {
   const locomotiveScroll = new LocomotiveScroll();
   const [navBarState, setNavBarState] = useState(true);
   const bigCursorRef = useRef();
-  const cursorState = useSelector((state)=> state.cursor.status)
+  const cursorState = useSelector((state) => state.cursor.status);
 
   useEffect(() => {
     let timeOut;
@@ -33,8 +30,8 @@ function App() {
     window.addEventListener("mousemove", (dets) => {
       var xDiff = dets.x - xPrev;
       var yDiff = dets.y - yPrev;
-      xScale = gsap.utils.clamp(0.9, 1.1, xDiff * .3 );
-      yScale = gsap.utils.clamp(0.9, 1.1, yDiff * .3 );
+      xScale = gsap.utils.clamp(0.9, 1.1, xDiff * 0.3);
+      yScale = gsap.utils.clamp(0.9, 1.1, yDiff * 0.3);
       xPrev = dets.x;
       yPrev = dets.y;
 
@@ -52,7 +49,7 @@ function App() {
       <div className="w-full bg-[#0F0F0F] text-white relative ---bg-[url('https://wallpapercave.com/wp/wp6418877.jpg')]">
         <div
           className={`bigCursor fixed -top-[6%] -left-[2%] h-14 w-14 bg-zinc-200 rounded-full z-[999999999] pointer-events-none flex justify-center items-center text-black text-xs ${
-            cursorState ? "block" : "hidden"
+            cursorState ? "hidden md:block" : "hidden"
           } mix-blend-difference`}
           ref={bigCursorRef}
           style={{

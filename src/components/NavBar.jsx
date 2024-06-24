@@ -9,12 +9,12 @@ import { TiSocialLinkedin } from "react-icons/ti";
 function NavBar({ navBarState }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
-    const socialMedia = [
-      { icon: <FaInstagram />, link: "#" },
-      { icon: <FaDribbble />, link: "#" },
-      { icon: <FaFacebookF />, link: "#" },
-      { icon: <TiSocialLinkedin />, link: "#" },
-    ];
+  const socialMedia = [
+    { icon: <FaInstagram />, link: "#" },
+    { icon: <FaDribbble />, link: "#" },
+    { icon: <FaFacebookF />, link: "#" },
+    { icon: <TiSocialLinkedin />, link: "#" },
+  ];
   const navItems = [
     {
       name: "Home",
@@ -57,12 +57,12 @@ function NavBar({ navBarState }) {
           {navItems.map((item, ind) => (
             <NavLink
               to={item.rout}
+              key={item.name}
               className={({ isActive }) =>
                 `${isActive && "text-[#CDEA68] font-bold"} ${
                   ind === navItems.length - 2 && "pr-20"
                 }`
               }
-              key={item.name}
             >
               {item.name}
             </NavLink>
@@ -85,7 +85,6 @@ function NavBar({ navBarState }) {
             exit={{ y: "-100%" }}
             className="fixed top-0 left-0 w-full min-h-screen bg-[#0F0F0F] flex items-center justify-around z-[998]"
           >
-
             <ul className="text-2xl text-white space-y-6">
               {navItems.map((item) => (
                 <li key={item.name}>

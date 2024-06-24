@@ -1,8 +1,6 @@
-
-import CreatePlayGround from './CreatePlayGround'
+import CreatePlayGround from "./CreatePlayGround";
 
 function playGround() {
-  
   return (
     <div className="h-screen">
       <CreatePlayGround
@@ -33,4 +31,4 @@ function playGround() {
   );
 }
 
-export default playGround
+export default playGround;

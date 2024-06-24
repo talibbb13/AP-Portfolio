@@ -20,6 +20,6 @@ const Home = () => {
       <Cards />
     </div>
   );
-}
+};
 
-export default Home
+export default Home;

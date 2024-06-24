@@ -1,7 +1,6 @@
-
-function BrandLogo({width, textColor}) {
+function BrandLogo({ width, textColor, className }) {
   return (
-    <div className="logo">
+    <div className={`logo ${className}`}>
       <svg
         width={`${width ? width : "72"}`}
         height="30"

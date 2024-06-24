@@ -42,7 +42,7 @@ function HoverImg() {
       top: yLoc,
       rotate: gsap.utils.clamp(-20, 20, rotDiff * 0.3),
     });
-    dispatch(showCursor())
+    dispatch(showCursor());
   };
 
   const handleImgHide = (elem) => {
@@ -51,7 +51,7 @@ function HoverImg() {
       ease: Power4,
       duration: 0.5,
     });
-    dispatch(hideCursor())
+    dispatch(hideCursor());
   };
 
   return (
@@ -79,7 +79,7 @@ function HoverImg() {
               {item.title}
             </h1>
             <h5
-              className="group-hover:scale-[.9]"
+              className="group-hover:scale-[.9] text-[2vw]"
               style={{ transition: "cubic-bezier(0.19, 1, 0.22, 1) .5s" }}
             >
               {item.year}

@@ -2,11 +2,11 @@ import { useState } from "react";
 
 function CreateButton({
   children,
-  px = "px-[.7rem]",
-  py = "py-[.1rem]",
-  bgColor = "bg-transperant",
+  px = "px-[.5rem]",
+  py = "py-[.2rem]",
+  bgColor = "bg-transparent",
   textColor = "text-white",
-  fontSize = "text-sm",
+  fontSize = "text-xs sm:text-sm",
   icon,
   className = "",
   ...props
@@ -15,7 +15,7 @@ function CreateButton({
 
   return (
     <button
-      className={`${px} ${py} ${bgColor} ${textColor} ${fontSize} flex justify-center items-center gap-3 whitespace-nowrap rounded-full border relative overflow-hidden ${className}`}
+      className={`${px} ${py} ${bgColor} ${textColor} ${fontSize} flex justify-center items-center gap-2 whitespace-nowrap rounded-full border relative overflow-hidden ${className}`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       {...props}
@@ -31,7 +31,7 @@ function CreateButton({
       <span className="relative z-10">{children}</span>
       {icon && (
         <div
-          className={`iconBg bg-white h-[.7rem] w-[.7rem] rounded-full z-10  flex justify-center items-center ${
+          className={`iconBg bg-white h-[.5rem] w-[.5rem] sm:h-[.7rem] sm:w-[.7rem] rounded-full z-10 flex justify-center items-center ${
             hover && "scale-[2]"
           }`}
           style={{ transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)" }}
@@ -40,7 +40,9 @@ function CreateButton({
             style={{
               transition: "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)",
             }}
-            className={`iconCover ${hover ? "block" : "hidden"} text-[8px]`}
+            className={`iconCover ${
+              hover ? "block" : "hidden"
+            } text-[6px] sm:text-[8px]`}
           >
             {icon}
           </div>

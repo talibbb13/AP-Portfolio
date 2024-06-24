@@ -33,7 +33,10 @@ function Contact() {
       });
       return;
     } else {
-      const response = await axios.post(import.meta.env.VITE_FORMSPREE_ENDPOINT, data);
+      const response = await axios.post(
+        import.meta.env.VITE_FORMSPREE_ENDPOINT,
+        data
+      );
 
       if (response.status === 200) {
         toast.success("Form submitted successfully!", {

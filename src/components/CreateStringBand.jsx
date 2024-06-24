@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const CreateStringBand = ({color="white"}) => {
-    const strSvgRef = useRef();
-    const strPathRef = useRef();
+const CreateStringBand = ({ color = "white" }) => {
+  const strSvgRef = useRef();
+  const strPathRef = useRef();
   useEffect(() => {
     let path = `M 0 50 Q 350 50 700 50`;
     strSvgRef.current.addEventListener("mousemove", (dets) => {
@@ -35,7 +35,7 @@ const CreateStringBand = ({color="white"}) => {
         <path
           ref={strPathRef}
           d="M 0 50 Q 350 50 700 50"
-                  stroke={`${color}`}
+          stroke={`${color}`}
           fill="transparent"
         />
       </svg>

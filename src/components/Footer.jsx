@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BrandLogo from "./BrandLogo";
 import { FaDribbble, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { TiSocialLinkedin } from "react-icons/ti";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   const [time, setTime] = useState("00:00:00");
@@ -11,13 +12,27 @@ function Footer() {
     { icon: <FaFacebookF />, link: "#" },
     { icon: <TiSocialLinkedin />, link: "#" },
   ];
-  const pages = [
-    { name: "Home", link: "" },
-    { name: "Services", link: "" },
-    { name: "Our work", link: "" },
-    { name: "About us", link: "" },
-    { name: "Insights", link: "" },
-    { name: "Contact us", link: "" },
+  const navItems = [
+    {
+      name: "Home",
+      rout: "/",
+    },
+    {
+      name: "Skills",
+      rout: "/skills",
+    },
+    {
+      name: "Projects",
+      rout: "/projects",
+    },
+    {
+      name: "About me",
+      rout: "/about",
+    },
+    {
+      name: "Contact",
+      rout: "/contact",
+    },
   ];
 
   useEffect(() => {
@@ -31,28 +46,30 @@ function Footer() {
   }, []);
 
   return (
-    <div className="w-full px-14 flex justify-between">
-      <div className="min-h-screen w-1/2 uppercase text-9xl font-semibold flex flex-col justify-between py-10">
+    <div className="w-full px-2 md:px-14 flex flex-col md:flex-row justify-between">
+      <div className="md:min-h-screen w-full lg:w-1/2 uppercase text-6xl lg:text-9xl font-semibold flex flex-col justify-between md:py-10">
         <div className="bundler">
-          <h1 className="Founder -mb-8">eye-</h1>
+          <h1 className="Founder -mb-2 md:-mb-5">eye-</h1>
           <h1 className="Founder">Opening</h1>
         </div>
-        <BrandLogo />
+        <BrandLogo className="hidden md:block" />
       </div>
-      <div className="h-screen w-1/2 py-10 flex flex-col gap-10">
-        <h1 className="Founder text-9xl font-semibold uppercase">
+      <div className="h-auto lg:h-screen w-full lg:w-1/2 md:py-10 flex flex-col gap-10">
+        <h1 className="Founder text-6xl lg:text-9xl font-semibold uppercase">
           presentations
         </h1>
 
-        <div className="Links w-full flex justify-between px-40">
-          <div className="socialMediaLinks">
-            <h1 className="text-xl">SM:</h1>
+        <div className="Links w-full flex flex-col lg:flex-row justify-between">
+          <div className="socialMediaLinks mb-6 lg:mb-0">
+            <h1 className="text-xl pb-2">SM:</h1>
             <div className="bundler flex gap-3 underline">
               {socialMedia.map((sm, ind) => (
-                <a key={ind} href={sm.link} className="cover text-black bg-white rounded-full flex justify-center items-center h-10 w-10">
-                  <div >
-                    {sm.icon}
-                  </div>
+                <a
+                  key={ind}
+                  href={sm.link}
+                  className="cover text-black bg-white rounded-full flex justify-center items-center h-10 w-10 hover:opacity-50"
+                >
+                  <div className="text-2xl">{sm.icon}</div>
                 </a>
               ))}
             </div>
@@ -61,17 +78,23 @@ function Footer() {
           <div className="PagesLink">
             <h1 className="text-lg">PG:</h1>
             <div className="bundler flex flex-col underline">
-              {pages.map((page, ind) => (
-                <a key={ind} href={page.link}>
-                  {page.name}
-                </a>
+              {navItems.map((item, ind) => (
+                <NavLink
+                  key={ind}
+                  className={({ isActive }) =>
+                    `${isActive && "text-[#CDEA68] font-bold"}`
+                  }
+                  to={item.rout}
+                >
+                  {item.name}
+                </NavLink>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="modern flex justify-between items-center px-40">
-          <div className="bundler">
+        <div className="modern flex flex-col sm:flex-row justify-between">
+          <div className="bundler mb-6 lg:mb-0">
             <h3>
               E: <br /> hello@ochi.design
             </h3>
@@ -82,8 +105,9 @@ function Footer() {
             </p>
           </div>
 
-          {/* pending */}
-          <div className="time text-xl">{time}</div>
+          <div className="time text-xl font-semibold whitespace-nowrap pb-5">
+            {time}
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ const initialState = {
   height: "",
   width: "",
   innerText: "view",
-  icon: ""
+  icon: "",
 };
 
 const cursorState = createSlice({
