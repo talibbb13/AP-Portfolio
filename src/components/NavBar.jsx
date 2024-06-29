@@ -3,15 +3,16 @@ import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import BrandLogo from "./BrandLogo";
 import { FiMenu, FiX } from "react-icons/fi"; // Icons for the menu and close
-import { FaDribbble, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { TiSocialLinkedin } from "react-icons/ti";
+import { TbBrandGithubFilled } from "react-icons/tb";
 
 function NavBar({ navBarState }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const socialMedia = [
+    { icon: <TbBrandGithubFilled />, link: "#" },
     { icon: <FaInstagram />, link: "#" },
-    { icon: <FaDribbble />, link: "#" },
     { icon: <FaFacebookF />, link: "#" },
     { icon: <TiSocialLinkedin />, link: "#" },
   ];
@@ -69,11 +70,11 @@ function NavBar({ navBarState }) {
           ))}
         </ul>
       </div>
-      <div className="md:hidden">
+      <div className="block md:hidden z-[9999]">
         {menuOpen ? (
-          <FiX className="z-[999]" onClick={toggleMenu} size={30} />
+          <FiX className="hover:opacity-70" onClick={toggleMenu} size={30} />
         ) : (
-          <FiMenu onClick={toggleMenu} size={30} />
+          <FiMenu className="hover:opacity-70" onClick={toggleMenu} size={30} />
         )}
       </div>
 
@@ -104,11 +105,12 @@ function NavBar({ navBarState }) {
               <h1 className="font-semibold text-xl">SM</h1>
               {socialMedia.map((sm, ind) => (
                 <a
+                  target="_blank"
                   key={ind}
                   href={sm.link}
-                  className="cover text-black bg-white rounded-full flex justify-center items-center h-10 w-10"
+                  className="cover text-black bg-white rounded-full flex justify-center items-center h-10 w-10 hover:opacity-70"
                 >
-                  <div>{sm.icon}</div>
+                  <div className="text-2xl">{sm.icon}</div>
                 </a>
               ))}
             </div>

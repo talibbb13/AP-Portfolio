@@ -9,22 +9,22 @@ function HoverImg() {
 
   const elemItems = [
     {
-      title: "Workiz Easy",
+      title: "Clean UI",
       year: "2022",
       imgSrc: "https://cynthiaugwu.com/images/hovers/plug.png",
     },
     {
-      title: "Premium Blender",
+      title: "Responsiveness",
       year: "2014",
       imgSrc: "https://cynthiaugwu.com/images/hovers/ixperience.png",
     },
     {
-      title: "Hypercare Systems",
+      title: "Production Grade",
       year: "2019",
       imgSrc: "https://cynthiaugwu.com/images/hovers/hudu.png",
     },
     {
-      title: "Orderlion",
+      title: "Clean Code",
       year: "2019",
       imgSrc: "https://cynthiaugwu.com/images/cynthia.png",
     },

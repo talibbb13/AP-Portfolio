@@ -34,7 +34,7 @@ function ProjectsCard() {
         <div className="project">
           <div className="holder flex items-center gap-1 text-[1rem] py-1">
             <div className="point h-1 w-1 bg-white rounded-full"></div>
-            <p>FYDE</p>
+            <p>React Router</p>
           </div>
 
           <motion.div
@@ -43,12 +43,12 @@ function ProjectsCard() {
             className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
             <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
-              {"FYDE".split("").map((letter, ind) => (
+              {"Routs".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[0]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block"
+                  className="inline-block uppercase"
                   key={ind}
                 >
                   {letter}
@@ -56,7 +56,7 @@ function ProjectsCard() {
               ))}
             </h1>
             <div
-              className="w-full h-full bg-[url('https://ochi.design/wp-content/uploads/2023/10/Fyde_Illustration_Crypto_2-663x551.png')] rounded-lg bg-center bg-cover hover:scale-[.9]"
+              className="w-full h-full bg-[url('https://i.imgur.com/OheyG18.png')] rounded-lg bg-center bg-cover hover:scale-[.9]"
               style={{
                 transition: "transform 0.6s cubic-bezier(0, 0.55, 0.45, 1)",
               }}
@@ -67,7 +67,7 @@ function ProjectsCard() {
         <div className="project">
           <div className="holder flex items-center gap-1 text-[1rem] py-1">
             <div className="point h-1 w-1 bg-white rounded-full"></div>
-            <p>VISE</p>
+            <p>Anonymous Blog</p>
           </div>
 
           <motion.div
@@ -76,12 +76,12 @@ function ProjectsCard() {
             className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
             <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
-              {"VISA".split("").map((letter, ind) => (
+              {"blog".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[1]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block"
+                  className="inline-block uppercase"
                   key={ind}
                 >
                   {letter}
@@ -89,7 +89,7 @@ function ProjectsCard() {
               ))}
             </h1>
             <div
-              className="w-full h-full bg-[url('https://ochi.design/wp-content/uploads/2022/09/Vise_front2-663x551.jpg')] rounded-lg bg-center bg-cover hover:scale-[.9] transition ease-in"
+              className="w-full h-full bg-[url('https://i.imgur.com/Yt9JgIN.png')] rounded-lg bg-center bg-cover hover:scale-[.9] transition ease-in"
               style={{
                 transition: "transform 0.6s cubic-bezier(0, 0.55, 0.45, 1)",
               }}
@@ -100,7 +100,7 @@ function ProjectsCard() {
         <div className="project">
           <div className="holder flex items-center gap-1 text-[1rem] py-1">
             <div className="point h-1 w-1 bg-white rounded-full"></div>
-            <p>TRAWA</p>
+            <p>Sticky Notes</p>
           </div>
 
           <motion.div
@@ -109,12 +109,12 @@ function ProjectsCard() {
             className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
             <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
-              {"TRAWA".split("").map((letter, ind) => (
+              {"Notes".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[2]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block"
+                  className="inline-block uppercase"
                   key={ind}
                 >
                   {letter}
@@ -122,7 +122,7 @@ function ProjectsCard() {
               ))}
             </h1>
             <div
-              className="w-full h-full bg-[url('https://ochi.design/wp-content/uploads/2023/08/Frame-3875-663x551.jpg')] rounded-lg bg-center bg-cover  hover:scale-[.9] transition ease-in"
+              className="w-full h-full bg-[url('https://i.imgur.com/Kg2Nxwj.png')] rounded-lg bg-center bg-cover  hover:scale-[.9] transition ease-in"
               style={{
                 transition: "transform 0.6s cubic-bezier(0, 0.55, 0.45, 1)",
               }}
@@ -137,17 +137,17 @@ function ProjectsCard() {
         >
           <div className="holder flex items-center gap-1 text-[1rem] py-1">
             <div className="point h-1 w-1 bg-white rounded-full"></div>
-            <p>PREMIUM BLEND</p>
+            <p>Music Player</p>
           </div>
 
           <div className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer">
             <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
-              {"PREMIUM".split("").map((letter, ind) => (
+              {"Music".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[3]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block"
+                  className="inline-block uppercase"
                   key={ind}
                 >
                   {letter}
@@ -155,7 +155,7 @@ function ProjectsCard() {
               ))}
             </h1>
             <div
-              className="w-full h-full bg-[url('https://ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png')] rounded-lg bg-center bg-cover  hover:scale-[.9] transition ease-in"
+              className="w-full h-full bg-[url('https://i.imgur.com/BGmPhmH.png')] rounded-lg bg-center bg-cover  hover:scale-[.9] transition ease-in"
               style={{
                 transition: "transform 0.6s cubic-bezier(0, 0.55, 0.45, 1)",
               }}

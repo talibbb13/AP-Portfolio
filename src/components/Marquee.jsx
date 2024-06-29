@@ -15,7 +15,7 @@ function Marquee() {
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
           className="Founder leading-[.9] lg:-mt-[40px] md:-mt-[30px] sm:mt-0 px-14"
         >
-          We are Ochi
+          modern web designs
         </motion.h1>
         <motion.h1
           initial={{ x: "0" }}
@@ -23,7 +23,7 @@ function Marquee() {
           transition={{ ease: "linear", repeat: Infinity, duration: 10 }}
           className="Founder leading-[.9] lg:-mt-[40px] md:-mt-[30px] sm:mt-0 px-14"
         >
-          We are Ochi
+          modern web designs
         </motion.h1>
       </div>
     </div>

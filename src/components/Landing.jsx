@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import CreateStringBand from "./CreateStringBand";
 
 function Landing() {
-  const headingTexts = ["We Create", "Eye Opening", "Presentations"];
+  const headingTexts = ["Creating", "Eye Opening", "Websites"];
   const bottomItems = [
-    "For public and private companies",
-    "From the first pitch to IPO",
-    "start the project",
+    "For Individuals and Startups",
+    "From Concept to Deployment",
+    "Let's Build Together",
   ];
 
   return (
