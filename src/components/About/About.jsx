@@ -1,7 +1,7 @@
 function About() {
   return (
-    <div className="min-h-screen bg-[#0F0F0F] text-white px-40 py-32">
-      <div className="mx-auto space-y-12 text-center">
+    <div className="About-Page min-h-screen text-white px-40 py-32 relative bg-[url('https://i.imgur.com/Mt8gafZ.png')] bg-repeat-y bg-cover before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-90 before:z-0">
+      <div className="mx-auto space-y-12 text-center relative z-10">
         <h1 className="text-7xl font-bold text-[#CDEA68] Grotesk mb-4">
           Talib Raeen
         </h1>

@@ -72,8 +72,8 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#0F0F0F] pt-32">
-      <div className="w-11/12 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-2/5 bg-[#0F0F0F] text-white rounded-lg p-8 shadow-lg border border-[#014D43]">
+    <div className="min-h-screen flex items-center justify-center bg-[#0F0F0F] pt-32 bg-[url('https://i.imgur.com/Mt8gafZ.png')] bg-repeat-y bg-cover before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-90 before:z-0">
+      <div className="w-11/12 sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-2/5 bg-[#0F0F0F] text-white rounded-lg p-8 shadow-lg border border-[#8BB500] relative z-10">
         <ToastContainer />
         <h2 className="Grotesk text-5xl font-bold mb-2 text-center -tracking-[.01em]">
           Contact me
@@ -153,7 +153,7 @@ function Contact() {
             className={`w-full py-3 text-white font-bold rounded-lg shadow-md transition-all duration-300 relative overflow-hidden ${
               hover
                 ? "bg-[#014D43] text-black"
-                : "bg-[#0F0F0F] text-white border border-[#014D43]"
+                : "bg-[#0F0F0F] text-white border border-[#8BB500]"
             }`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}

@@ -26,7 +26,7 @@ function ProjectsCard() {
     dispatch(hideCursor());
   };
   return (
-    <div className="min-h-screen rounded-tl-lg rounded-tr-lg bg-[#0F0F0F] relative">
+    <div className="min-h-screen rounded-tl-lg rounded-tr-lg pt-10 relative">
       <h1 className="text-4xl py-8 px-14">Featured Projects</h1>
       <hr />
       <div className="projects flex justify-center gap-10 flex-wrap px-14 py-10 whitespace-nowrap">

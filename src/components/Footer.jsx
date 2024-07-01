@@ -47,18 +47,18 @@ function Footer() {
   }, []);
 
   return (
-    <>
+    <div className="relative bg-[#0F0F0F] rounded-tl-xl rounded-tr-xl">
       {" "}
       <CreateStringBand />
       <div className="w-full px-2 md:px-14 flex flex-col md:flex-row justify-between">
-        <div className="md:min-h-screen w-full lg:w-1/2 uppercase text-6xl lg:text-9xl font-semibold flex flex-col justify-between md:py-10">
+        <div className="md:min-h-screen w-full lg:w-1/2 uppercase text-6xl lg:text-9xl font-semibold flex flex-col justify-between">
           <div className="bundler">
             <h1 className="Founder -mb-2 md:-mb-5">eye-</h1>
             <h1 className="Founder">Opening</h1>
           </div>
           <BrandLogo className="hidden md:block" />
         </div>
-        <div className="h-auto lg:h-screen w-full lg:w-1/2 md:py-10 flex flex-col gap-10">
+        <div className="h-auto lg:h-screen w-full lg:w-1/2 flex flex-col gap-10">
           <h1 className="Founder text-6xl lg:text-9xl font-semibold uppercase">
             presentations
           </h1>
@@ -115,7 +115,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

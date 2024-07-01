@@ -89,7 +89,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="bg-[#0F0F0F] text-white pt-32 px-14">
+    <div className="text-white pt-32 px-14 relative">
       <h1 className="Founder leading-[.75] -tracking-[.01em] text-8xl font-bold mb-8 text-center uppercase">
         I can Offer you...
       </h1>

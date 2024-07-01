@@ -117,7 +117,7 @@ const projects = [
 
 
   return (
-    <div className="min-h-screen text-white pt-24 px-4 md:px-14">
+    <div className="min-h-screen text-white pt-24 px-4 md:px-14 bg-[url('https://i.imgur.com/Mt8gafZ.png')] bg-repeat-y bg-cover before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-90">
       {projects.map((project, ind) => (
         <div
           data-scroll
@@ -157,7 +157,6 @@ const projects = [
           </div>
         </div>
       ))}
-    
     </div>
   );
 }
