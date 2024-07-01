@@ -8,10 +8,10 @@ import CreateStringBand from "./CreateStringBand"
 function Footer() {
   const [time, setTime] = useState("00:00:00");
   const socialMedia = [
-    { icon: <FaInstagram />, link: "#" },
-    { icon: <FaDribbble />, link: "#" },
-    { icon: <FaFacebookF />, link: "#" },
-    { icon: <TiSocialLinkedin />, link: "#" },
+    { icon: <TbBrandGithubFilled />, link: "https://github.com/talibbb13" },
+    { icon: <FaInstagram />, link: "https://www.instagram.com/talibbb35/" },
+    { icon: <FaFacebookF />, link: "https://m.facebook.com/talib.raeen.184/" },
+    { icon: <TiSocialLinkedin />, link: "https://www.linkedin.com/in/talibbb13" },
   ];
   const navItems = [
     {
