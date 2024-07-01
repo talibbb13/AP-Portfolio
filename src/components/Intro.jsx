@@ -7,10 +7,10 @@ import { TiSocialLinkedin } from "react-icons/ti";
 
 function Intro() {
   const socialMedia = [
-    { icon: <TbBrandGithubFilled />, link: "#" },
-    { icon: <FaInstagram />, link: "#" },
-    { icon: <FaFacebookF />, link: "#" },
-    { icon: <TiSocialLinkedin />, link: "#" },
+    { icon: <TbBrandGithubFilled />, link: "https://github.com/talibbb13" },
+    { icon: <FaInstagram />, link: "https://www.instagram.com/talibbb35/" },
+    { icon: <FaFacebookF />, link: "https://m.facebook.com/talib.raeen.184/" },
+    { icon: <TiSocialLinkedin />, link: "https://www.linkedin.com/in/talibbb13" },
   ];
   return (
     <div
