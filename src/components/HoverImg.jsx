@@ -1,32 +1,31 @@
 import gsap, { Power4 } from "gsap";
-import { hideCursor, showCursor } from "../store/dataSlice";
-import { useDispatch } from "react-redux";
 
 function HoverImg() {
-  const dispatch = useDispatch();
   var rot = 0;
   var rotDiff = 0;
 
   const elemItems = [
     {
-      title: "Clean UI",
-      year: "2022",
-      imgSrc: "https://cynthiaugwu.com/images/hovers/plug.png",
-    },
-    {
       title: "Responsiveness",
-      year: "2014",
+      year: "",
       imgSrc: "https://cynthiaugwu.com/images/hovers/ixperience.png",
     },
     {
+      title: "Clean UI",
+      year: "",
+      imgSrc: "https://i.imgur.com/fUPLJT3.jpeg",
+    },
+    {
       title: "Production Grade",
-      year: "2019",
-      imgSrc: "https://cynthiaugwu.com/images/hovers/hudu.png",
+      year: "",
+      imgSrc:
+        "https://media.istockphoto.com/id/513544018/vector/young-programmer-coding-a-new-project.jpg?s=612x612&w=0&k=20&c=SRXmEMulFwNT2lZEOFumFyDA-r8820b5BFdJMcUiaoY=",
     },
     {
       title: "Clean Code",
-      year: "2019",
-      imgSrc: "https://cynthiaugwu.com/images/cynthia.png",
+      year: "",
+      imgSrc:
+        "https://img.freepik.com/premium-vector/programming-development-concept-3d-isometric-design-man-creating-code-mobile-software-working-with-java-language-script-vector-illustration-with-isometry-people-scene-web-graphic_9209-14626.jpg",
     },
   ];
 
@@ -42,7 +41,6 @@ function HoverImg() {
       top: yLoc,
       rotate: gsap.utils.clamp(-20, 20, rotDiff * 0.3),
     });
-    dispatch(showCursor());
   };
 
   const handleImgHide = (elem) => {
@@ -51,7 +49,6 @@ function HoverImg() {
       ease: Power4,
       duration: 0.5,
     });
-    dispatch(hideCursor());
   };
 
   return (

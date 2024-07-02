@@ -17,7 +17,7 @@ const Home = () => {
       <PlayGround />
       <ProjectsCard />
       <HoverImg />
-      <Cards />
+      {/* <Cards /> */}
     </div>
   );
 };

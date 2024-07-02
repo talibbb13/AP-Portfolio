@@ -57,7 +57,9 @@ function Landing() {
         <ul className="w-full flex flex-col md:flex-row justify-between space-y-4 md:space-y-0">
           {bottomItems.map((bottomItem, ind) =>
             ind === bottomItems.length - 1 ? (
-              <CreateButton children={bottomItem} key={ind}></CreateButton>
+              <a href="https://www.linkedin.com/in/talibbb13/" target="_blank" key={ind}>
+                <CreateButton children={bottomItem} key={ind}></CreateButton>
+              </a>
             ) : (
               <li className="text-md" key={ind}>
                 {bottomItem}

@@ -69,7 +69,7 @@ function Intro() {
       <div className="mt-[10vw] md:mt-[7vw] text-3xl md:text-6xl flex flex-col md:flex-row justify-between pb-12">
         <div className="mb-6 md:mb-0">
           <h3 className="pb-4 md:pb-7 text-[#3a3f27] font-medium">Approach:</h3>
-          <a href="#">
+          <a href="https://github.com/talibbb13/" target="_blank">
             {" "}
             <CreateButton
               px="px-[1rem] md:px-[2rem]"

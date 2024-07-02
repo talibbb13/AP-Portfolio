@@ -42,13 +42,13 @@ function ProjectsCard() {
             onHoverEnd={() => handleHoverEnd(0)}
             className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
-            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
+            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-bold overflow-hidden hidden md:block uppercase tracking-tight">
               {"Routs".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[0]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block uppercase"
+                  className="inline-block tracking-tight"
                   key={ind}
                 >
                   {letter}
@@ -75,13 +75,13 @@ function ProjectsCard() {
             onHoverEnd={() => handleHoverEnd(1)}
             className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
-            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
+            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-bold overflow-hidden hidden md:block uppercase tracking-tight">
               {"blog".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[1]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block uppercase"
+                  className="inline-block"
                   key={ind}
                 >
                   {letter}
@@ -108,13 +108,13 @@ function ProjectsCard() {
             onHoverEnd={() => handleHoverEnd(2)}
             className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer"
           >
-            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
+            <h1 className="absolute top-1/2 left-full -translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-bold overflow-hidden hidden md:block uppercase tracking-tight">
               {"Notes".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[2]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block uppercase"
+                  className="inline-block"
                   key={ind}
                 >
                   {letter}
@@ -141,13 +141,13 @@ function ProjectsCard() {
           </div>
 
           <div className="cardHolder h-[50vh] w-[90vw] sm:h-[60vh] sm:w-[70vw] md:h-[80vh] md:w-[40vw] relative cursor-pointer">
-            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-semibold overflow-hidden hidden md:block">
+            <h1 className="absolute top-1/2 right-full translate-x-1/2 -translate-y-1/2 z-50 text-9xl text-[#CDEA68] font-bold overflow-hidden hidden md:block uppercase tracking-tight">
               {"Music".split("").map((letter, ind) => (
                 <motion.span
                   initial={{ y: "100%" }}
                   animate={proCards[3]}
                   transition={{ ease: [0.22, 1, 0.36, 1], delay: ind * 0.05 }}
-                  className="inline-block uppercase"
+                  className="inline-block"
                   key={ind}
                 >
                   {letter}

@@ -46,11 +46,21 @@ function Footer() {
     }, 1000);
   }, []);
 
+  const backToTop = () => {
+       window.scrollTo({
+         top: 0,
+         behavior: "smooth",
+       });
+  }
+
   return (
     <div className="relative bg-[#0F0F0F] rounded-tl-xl rounded-tr-xl">
       {" "}
+      <div onClick={backToTop} className="bg-[#CDEA68] text-[#014D43] py-5 text-black font-bold text-center text-lg cursor-pointer">
+        Back to the Top
+      </div>
       <CreateStringBand />
-      <div className="w-full px-2 md:px-14 flex flex-col md:flex-row justify-between">
+      <div className="w-full px-2 md:px-14 flex flex-col md:flex-row justify-between pb-5">
         <div className="md:min-h-screen w-full lg:w-1/2 uppercase text-6xl lg:text-9xl font-semibold flex flex-col justify-between">
           <div className="bundler">
             <h1 className="Founder -mb-2 md:-mb-5">eye-</h1>
@@ -58,7 +68,7 @@ function Footer() {
           </div>
           <BrandLogo className="hidden md:block" />
         </div>
-        <div className="h-auto lg:h-screen w-full lg:w-1/2 flex flex-col gap-10">
+        <div className="h-auto lg:h-screen w-full lg:w-1/2 flex flex-col justify-between gap-10">
           <h1 className="Founder text-6xl lg:text-9xl font-semibold uppercase">
             presentations
           </h1>

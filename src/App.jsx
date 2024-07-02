@@ -42,26 +42,25 @@ function App() {
         timeOut = setTimeout(() => {
           bigCursorRef.current.style.transform = `translate(${dets.x}px, ${dets.y}px) scale(1, 1)`;
         }, 100);
-      }): window.removeEventListener("mousemove", ()=> console.log("hell"))
+      }): window.removeEventListener("mousemove", () => { console.log("mousemove listner removed") });
   });
 
   return (
     <>
       <div className="w-full bg-[#0F0F0F] text-white relative">
-        {cursorState && (
+        {cursorState ? (
           <div
             className="bigCursor fixed -top-[6%] -left-[2%] h-14 w-14 bg-zinc-100 rounded-full z-[999999999] pointer-events-none text-black text-xs hidden md:block mix-blend-difference whitespace-nowrap font-bold"
             ref={bigCursorRef}
             style={{
               transition: "transform 0.3s cubic-bezier(0.33, 1, 0.68, 1)",
-              // backgroundImage: "url(./Assets/images/yellow.png)"
             }}
           >
             <div className="bundler absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
               Click it <RxArrowTopRight className="inline-block" />
             </div>
           </div>
-        )}
+        ): null}
         <NavBar navBarState={navBarState} />
         <Outlet />
         <Footer />
