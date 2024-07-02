@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import BrandLogo from "./BrandLogo";
-import { FaDribbble, FaFacebookF, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import CreateStringBand from "./CreateStringBand"
+import { TbBrandGithubFilled } from "react-icons/tb";
 
 function Footer() {
   const [time, setTime] = useState("00:00:00");
@@ -70,7 +71,7 @@ function Footer() {
         </div>
         <div className="h-auto lg:h-screen w-full lg:w-1/2 flex flex-col justify-between gap-10">
           <h1 className="Founder text-6xl lg:text-9xl font-semibold uppercase">
-            presentations
+            WEB Designs
           </h1>
 
           <div className="Links w-full flex flex-col lg:flex-row justify-between">
@@ -110,12 +111,14 @@ function Footer() {
           <div className="modern flex flex-col sm:flex-row justify-between">
             <div className="bundler mb-6 lg:mb-0">
               <h3>
-                E: <br /> hello@ochi.design
+                E: <br /> talibraeen13@gmail.com
               </h3>
               <br />
               <p>
-                A: <br /> Ochi Design, 78 Market Street, <br /> Suite 456, San
-                Francisco, CA 94103.
+                A: <br /> Kausa, Mumbra <br />
+Thane - 400612 <br />
+Mumbai, Maharashtra <br />
+India
               </p>
             </div>
 
