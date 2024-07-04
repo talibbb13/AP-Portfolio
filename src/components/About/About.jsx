@@ -6,7 +6,7 @@ function About() {
           Talib Raeen
         </h1>
         <p className="text-xl tracking-wide" style={{ wordSpacing: ".1rem" }}>
-          Hi, I'm a web developer from Mumbai, India. I love playing chess,
+          Hi, I'm Talib. A web developer from Mumbai, India. I love playing chess,
           watching sci-fi movies, and exploring philosophy and psychology. These
           interests fuel my curiosity and creativity.
         </p>
